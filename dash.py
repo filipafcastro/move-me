@@ -1,8 +1,6 @@
 import openai
 import streamlit as st
 
-import credentials
-
 st.title("WOD Generator")
 
 experience = st.selectbox(
