@@ -18,7 +18,7 @@ mode = st.selectbox(
     ('AMRAP', 'For time'))
 
 # Set the API key for the OpenAI API
-openai.api_key = credentials.openai_api_key
+openai.api_key = st.secrets["openai_api_key"]
 
 # Set the model to use
 model_engine = "text-davinci-002"
