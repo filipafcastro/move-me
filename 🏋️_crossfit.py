@@ -3,17 +3,13 @@ import streamlit as st
 
 st.title("WOD Generator")
 
-experience = st.selectbox(
-    'For how many years have you been doing crossfit?',
-    ('less than 2', 'between 2 and 5', 'more than 5'))
-
 type = st.selectbox(
     'What do you prefer to work today?',
     ('cardio', 'strength'))
 
 mode = st.selectbox(
     'AMRAP or for time?',
-    ('AMRAP', 'For time'))
+    ('AMRAP', 'for time'))
 
 # Set the API key for the OpenAI API
 openai.api_key = st.secrets["openai_api_key"]
@@ -23,7 +19,7 @@ model_engine = "text-davinci-002"
 
 if st.button('Give me a WOD'):
     # Set the prompt for the model
-    prompt = f"Give me a crossfit {type} wod focused on {type} given that I have {experience} years experience in crossfit"
+    prompt = f"Recommend me a crossfit workout of the day of type {mode} focused on {type}"
 
     # Generate a response from the model
     response = openai.Completion.create(engine=model_engine, prompt=prompt, max_tokens=1024, n=1,stop=None,temperature=0.5)
