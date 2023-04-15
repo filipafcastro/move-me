@@ -20,7 +20,7 @@ model_engine = "text-davinci-002"
 if st.button('Give me a yoga workout'):
     # Set the prompt for the model
     prompt = f"Recommend me a workout to practice {type} yoga during {time} minutes"
-    st.write(prompt)
+    #st.write(prompt)
 
     # Generate a response from the model
     response = openai.Completion.create(engine=model_engine, prompt=prompt, max_tokens=1024, n=1,stop=None,temperature=0.5)
