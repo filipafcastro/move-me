@@ -19,7 +19,7 @@ model_engine = "text-davinci-002"
 
 if st.button('Give me a training plan'):
     # Set the prompt for the model
-    prompt = f"I wish to be able to run {distance} in {time} months' time. Outline a running plan for me to follow each month in order to achieve this"
+    prompt = f"I wish to be able to run {distance} in {time} months' time. Outline a running plan for me to follow each month in order to achieve this goal"
     #st.write(prompt)
 
     # Generate a response from the model
